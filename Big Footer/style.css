@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+body {
+  background-color: #3b4d7d;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+ul li {
+  padding-bottom: 18px;
+}
+
+li a {
+  position: relative;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #5bc0d8;
+  transition: width .3s linear;
+}
+
+li:hover a::after {
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: 'Merriweather', serif;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f3161;
+  width: 1200px;
+  border-radius: 18px;
+  padding: 40px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+div .lang {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  margin-left: -8px;
+}
+
+div .lang a {
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.lang a.active,
+.lang a:hover {
+  background-color: #5bc0d8;
+}
+
+.icons {
+  font-size: 28px;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 28px;
+}
+
+.icons i {
+  color: #1f3161;
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.icons i:hover {
+  color: #5bc0d8;
+  background-color: #1f3161;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+}
+
+.info a {
+  margin: 12px;
+  color: #bbb;
+}
+
+.info a:hover {
+  color: #fff;
+}
