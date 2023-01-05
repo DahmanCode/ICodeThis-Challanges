@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all .1s;
+  color: #051e44;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* overflow: hidden; */
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first .card {
+  width: 320px;
+}
+
+.date {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 12px;
+  color: #777;
+  font-weight: 600;
+}
+
+.date strong {
+  color: #777;
+}
+
+.date small {
+  position: absolute;
+  top: -2px;
+}
+
+.date strong {
+  padding-left: 8px;
+}
+
+.first .user,
+.card-2 .user {
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.first .user h4,
+.card-2 .user h4 {
+  margin-left: 6px;
+  color: #7896e7;
+}
+
+.first .img {
+  height: 170px;
+}
+
+.first .img span {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  z-index: 1000;
+}
+
+.second {
+  /* grid-area: bottom; */
+  display: flex;
+}
+
+.second .img {
+  position: relative;
+} 
+
+.second .img span {
+  position: absolute;
+  z-index: 1000;
+}
+
+.card-1 {
+  width: 500px;
+}
+
+.card-1 .img {
+  height: 180px;
+}
+
+.card-1 .img span {
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+.card-1 .user {
+  margin-top: 20px;
+}
+
+.card-2 {
+  width: 280px;
+  height: 310px;
+}
+
+.card-2 .img {
+  height: 140px;
+}
+
+.card-2 .img span {
+  top: 12px;
+  left: 12px;
+  font-size: 10px;
+}
+
+.card-2 .info .date {
+  position: relative;
+  margin-top: 30px;
+}
+
+.card-2 .info .date::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background-color: rgba(119, 119, 119, .1);
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 10px 30px 20px -25px rgba(174, 190, 231, 0.3);
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card .img {
+  width: 100%;
+  /* height: 185px; */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img img {
+  width: 100%;
+  object-fit: contain;
+  transition: transform .3s;
+}
+
+.img:hover img {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.card .info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: #7dcfff;
+}
+
+.btn-2 {
+  background-color: #9e54ff;
+}
+
+.btn-3 {
+  background-color: #eb54ff;
+}
+
+.info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 14px;
+}
+
+.info .user {
+  width: 160px;
+  display: flex;
+  cursor: pointer;
+}
+
+.user .user-info {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.user h4 {
+  position: relative;
+}
+
+.user h4 span {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  transition: width .3s linear;
+}
+
+.user:hover h4 span {
+  width: 100%;
+}
+
+.user-info span {
+  font-size: 12px;
+  color: #999;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
