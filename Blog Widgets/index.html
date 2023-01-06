@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Blog Widgets</title>
+</head>
+<body>
+  
+  <div class="container">
+
+    <div class="box-container">
+      <div class="box">
+        <h1>Tags</h1>
+        <div class="tags">
+          <a href="#">Blender</a>
+          <a href="#">Browser</a>
+          <a href="#">cross-platform</a>
+          <a href="#">Hololens</a>
+          <a href="#">Microsoft</a>
+          <a href="#">Mixed Reality</a>
+          <a href="#" class="active">modelling</a>
+          <a href="#">MR</a>
+          <a href="#">nodejs</a>
+          <a href="#">streamsocket</a>
+          <a href="#">unity</a>
+          <a href="#">unity3D</a>
+          <a href="#">unreal engine</a>
+          <a href="#">VR</a>
+          <a href="#">websockets</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; position: relative; align-items: flex-start; gap: 4rem;">
+
+      <div class="box-container">
+        <div class="box">
+          <h1>Recent posts</h1>
+          <ul>
+            <li>
+              <a href="#">Azure Speech Studio for Mixed Reality</a>
+            </li>
+            <li class="active">
+              <a href="#">HoloLens 2 Unreal Project Template</a>
+            </li>
+            <li>
+              <a href="#">Simplygon in Azure</a>
+            </li>
+            <li>
+              <a href="#">Blender in Azure</a>
+            </li>
+            <li>
+              <a href="#">AAD Login on HoloLens 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="search">
+            <input type="text" class="input" placeholder="Search articles, topics, etc.">
+            <button class="searchBtn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <button class="btn">Search</button>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
