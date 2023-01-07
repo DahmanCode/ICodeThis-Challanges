@@ -126,6 +126,7 @@ article {
 article .heading {
   grid-area: top;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 20px;
