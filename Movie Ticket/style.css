@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all .2s;
+}
+
+body {
+  background-color: #f1f3fc;
+  font-family: 'Montserrat', sans-serif;
+  color: #0f1f57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6886f5;
+}
+
+
+ul li {
+  padding-bottom: .2rem;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: -.2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.container {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+  width: 500px;
+  height: 80vh;
+  margin: 6rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  color: #f1f3fc;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(15, 31, 87);
+  opacity: .2;
+  z-index: 10;
+}
+
+.header:hover::after {
+  opacity: 0;
+}
+
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.header > i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 30px;
+  z-index: 100;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(104, 134, 245, .5);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.header > i:hover {
+  background-color: rgb(104, 134, 245);
+  color: #0f1f57;
+}
+
+.header .title {
+  position: absolute;
+  z-index: 100;
+  left: 20px;
+  bottom: 20px;
+}
+
+.main {
+  width: 100%;
+  height: 60%;
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.main p {
+  color: rgb(91,136,157);
+  font-size: 14px;
+}
+
+.main .heading {
+  margin-bottom: 10px;
+}
+
+.heading span {
+  padding-right: 15px;
+}
+
+.heading i {
+  padding-right: 10px;
+}
+
+.main .seats {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.seats .seats-info {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: relative;
+  margin: 10px 0;
+}
+
+.seats-info p {
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+.seats-info .seats-column {
+  width: 100%; 
+  position: relative;
+  left: -15px;
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seats button {
+  font-size: 23px;
+  background-color: transparent;
+  border: none;
+  padding-right: 20px;
+  color: rgb(91,136,157);
+  cursor: pointer;
+}
+
+.available {
+  color: rgb(91,136,157)!important;
+}
+
+.booked {
+  color: rgba(91,136,157,0.5)!important;
+}
+
+.selected {
+  color: rgb(237,64,122)!important;
+}
+
+.main .screen {
+  position: relative;
+  left: -25px;
+}
+
+.screen p {
+  color: #6886f5;
+  font-size: 18px;
+}
+
+.main > span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transform: (20deg);
+  bottom: 16%;
+  width: 80%;
+  /* height: 10px; */
+  border-bottom: 3px solid #2d52f3;
+  border-radius: 70%;
+  box-shadow: 0 -10px 20px #2d52f3;
+  /* background-color: #6886f5; */
+}
+
+.footer {
+  width: 100%;
+  height: 15%;
+  background-color: rgb(237,64,122);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer h4 {
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer .info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info div:first-child{
+  
+  /* align-items: flex-start; */
+  background-color: #6886f5;
+  width: 50%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.footer .btn {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.footer .btn:hover {
+  color: #fff;
+  background-color: #6886f5;
+}
