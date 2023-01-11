@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all .3s;
+}
+
+body {
+  background-color: #f1f3fc;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.paginations {
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginations .pagination {
+  padding: 50px 0;
+}
+
+.pagination div {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #09153f;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.pagination span:hover,
+.pagination span.active {
+  background-color: #09153f;
+  color: #fff;
+}
+
+.pagination i {
+  color: #09153f;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 10px;
+  margin: 0 4px;
+}
+
+.square-pagination span,
+.circular-pagination div:nth-child(2) span:hover,
+.circular-pagination div:nth-child(2) span.active {
+  border: 1px solid rgb(15, 31, 87, .1);
+  border-radius: 6px;
+}
+
+.circular-pagination span {
+  border: 1px solid rgb(15, 31, 87, .1);
+  border-radius: 50%;
+}
+
+.circular-pagination i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #09153f;
+  border: 1px solid rgb(15, 31, 87, .1);
+}
+
+.circular-pagination i:hover {
+  background-color: #09153f;
+  color: #fff;
+}
+
+.normal-pagination div span {
+  background-color: transparent;
+}
+
+.normal-pagination div:first-child span {
+  border-radius: 50%;
+}
+
+.normal-pagination div:nth-child(2) span {
+  border-radius: 6px;
+}
