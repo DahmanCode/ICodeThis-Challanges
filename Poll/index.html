@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Poll</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="title">
+      <h3>If you write a book about failure, and it doesn't sell, is it called success?</h3>
+    </div>
+    <div class="poll">
+      <label>
+        <input type="checkbox">
+        <h3>Definitely a success.</h3>
+      </label>
+      <div class="range">
+        <input type="range" value="65" min="0" max="100" id="range">
+        <div class="progress green"></div>
+        <strong id="rangeValue">65%</strong>
+      </div>
+      
+    </div>
+    <div class="poll">
+      <label>
+        <input type="checkbox">
+        <h3>No.</h3>
+      </label>
+      <div class="range">
+        <input type="range" value="12" min="0" max="100" id="range">
+        <div class="progress red"></div>
+        <strong id="rangeValue">12%</strong>
+      </div>
+      
+    </div>
+    <div class="poll">
+      <label>
+        <input type="checkbox">
+        <h3>Only if it's in the How To section of the library.</h3>
+      </label>
+      <div class="range">
+        <input type="range" value="23" min="0" max="100" id="range">
+        <div class="progress orange"></div>
+        <strong id="rangeValue">23%</strong>
+      </div>
+      
+    </div>
+
+    <div class="button">
+      <button class="btn">Submit</button>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
