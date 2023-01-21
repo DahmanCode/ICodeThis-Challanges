@@ -39,7 +39,7 @@ p {
   height: auto;
   background-color: #fff;
   color: #1c2333;
-  margin: 4rem 2rem;
+  margin: 4rem 3rem;
   padding: .8rem 2rem;
 }
 
@@ -54,7 +54,6 @@ p {
   justify-content: center;
   background-color: #d9d9d9;
   box-shadow: inset 2px 0px 10px rgba(0, 0, 0, .3);
-  z-index: 1;
 }
 
 .icons i {
@@ -311,7 +310,6 @@ tr:nth-child(5) span::after {
 .container .profile-imgs {
   width: 100%;
   height: 56%;
-  /* height: 70%; */
   margin-top: 1rem;
 }
 
@@ -423,4 +421,160 @@ tr:nth-child(5) span::after {
 .profile-imgs .btn:hover {
   color: #d9d9d9;
   background-color: #35415e;
+}
+
+@media (max-width: 900px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .profile-info {
+    display: grid;
+    grid-template-areas: 
+      "side top"
+      "bottom bottom"
+    ;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 25% auto;
+    gap: 0 40px;
+  }
+  
+  .profile-info .image {
+    width: 8rem;
+    height: 10rem;
+  }
+
+  .profile-info .user {
+    margin-right: 0rem;
+    /* margin-top: 3rem; */
+  }
+  
+  .user .user-info {
+    width: 40%;
+    padding-right: 1.5rem;
+    padding-left: .5rem;
+  }
+
+  .user .user-nmbs {
+    width: 35%;
+  }
+
+  .user .user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+  }
+  
+  .user-btn .btn {
+    padding: 6px 24px;
+    font-size: 14px;
+  }
+
+  .profile-info .user-about {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .profile-imgs {
+    position: relative;
+    top: -60px;
+    /* height: 100%; */
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-info {
+    display: grid;
+    grid-template-areas: 
+      "side top"
+      "bottom bottom"
+    ;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: 30% 70%;
+    gap: 0 20px;
+    padding-right: 0;
+  }
+
+  .profile-info .image {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .profile-info .user {
+    border: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0rem;
+    /* margin-top: 3rem; */
+  }
+
+  .user .user-info,
+  .user .user-nmbs,
+  .user .user-btn {
+    width: 100%;
+    border: 0;
+    padding-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user .user-info {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .user .user-nmbs {
+    justify-content: space-between;
+  }
+
+  .user .user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-info .user-about {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  
+  .user-about .about {
+    width: 100%;
+  }
+  
+  .about h2 {
+    padding-bottom: .5rem;
+  }
+  
+  .about p {
+    padding-bottom: 1rem;
+  }
+  
+  .user-about .skills {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .profile-imgs {
+    position: relative;
+    top: 0px;
+  }
+
+  .profile-imgs .pictures {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pictures > .picture {
+    grid-row: span 3;
+    grid-column: span 1;
+  }
 }
