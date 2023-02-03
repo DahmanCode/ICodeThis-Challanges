@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&family=Montserrat:wght@500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #0068b880, #8c00c470);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  background-color: #ffffff;
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  gap: 60px;
+  width: 850px;
+  border-radius: 15px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  width: 160px;
+  height: 190px;
+  border-radius: 100px 52px 108px 60px;
+  background-color: #0091ff95;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -50px;
+  width: 180px;
+  height: 100px;
+  border-radius: 100px 82px 128px 90px;
+  background-color: #8c00ff95;
+  z-index: 1;
+}
+
+h2 {
+  position: relative;
+  width: 220px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  z-index: 99;
+  /* background-color: #0068b840; */
+}
+
+.wrapper {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #0068b840;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.wrapper.active {
+  box-shadow: 8px 15px 25px rgba(12, 151, 243, 0.2);
+
+}
+
+.toggle {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #111130;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;text-align: justify;
+  padding: 10px 0;
+  position: relative;
+}
+
+.toggle h4 {
+  padding-right: 30px;
+  letter-spacing: -1px;
+}
+
+.content {
+  position: relative;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 30px;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  font-family: 'Nunito', sans-serif;
+}
+
+.icon {
+  position: absolute;
+  width: 20px;
+  right: 0;
+  /* margin-left: 30px; */
+}
+
+.icon img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.icon.plus #plus,
+.icon.minus #minus {
+  display: block;
+}
+
+.icon.minus #plus,
+.icon.plus #minus {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+
+  h2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    flex-direction: column;
+    padding: 30px;
+    margin: 60px;
+    gap: 0;
+  }
+}
