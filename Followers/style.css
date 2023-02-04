@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #3547ec, #4fa1ff);
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+  width: 380px;
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(to right, #3547ec, #2289ff);
+  color: #fff;
+  padding: 20px 15px;
+}
+
+.header .title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+}
+
+.header .title i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input {
+  position: relative;
+}
+
+.input i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 23px;
+  color: #ffffff70;
+  cursor: pointer;
+}
+
+.header input {
+  background-color: rgba(255, 255, 255, .2);
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  padding: 18px;
+  padding-left: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.header input::placeholder {
+  color: #ffffff70;
+  font-family: 'Muli', sans-serif;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-list {
+  background-color: #d5ecff;
+  list-style-type: none;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+}
+
+.user-list .user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-info img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 65px;
+  width: 65px;
+  border: 4px solid #2289ff50;
+  transition: .2s linear;
+}
+
+.user-info:hover img {
+  transform: scale(1.05);
+    border: 2px solid #2289ff;
+
+} 
+
+.user-info h4 {
+  margin: 0 10px 0;
+  color: #104aa2;
+}
+
+.btns {
+  position: absolute;
+  right: 15px;
+}
+
+.btn {
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(to right, #3547ec, #2289ff);
+  color: #fff;
+  padding: 12px;
+  width: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0 10px 10px #2289ff50;
+  /* display: none; */
+  transition: all .2s;
+}
+
+.btn:hover {
+  box-shadow: none;
+} 
+
+.btns.active .btn1,
+.btns .btn2 {
+  display: none;
+}
+
+.btns.active .btn2 {
+  color: #3547ec;
+  border: 1px solid #3547ec;
+  background: transparent;
+  font-weight: 800;
+  box-shadow: none;
+  display: block;
+}
