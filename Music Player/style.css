@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+body {
+  background-color: #f7f8fc;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+i {
+  font-size: 22px;
+  cursor: pointer;
+  color: #7d7d7d90;
+}
+
+i:hover {
+  transform: scale(1.1);
+  color: #00b9b090;
+}
+
+.container {
+  background-color: #fff;
+  padding: 25px;
+  width: 360px;
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 3px 5px 20px #1ca39a30;
+}
+
+.container .header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header .content {
+  line-height: 1.4;
+  padding-top: 6px;
+}
+
+.header .content h3 {
+  font-size: 16px;
+}
+
+.content p {
+  font-size: 12px;
+  color: #7d7d7d90;
+}
+
+.content small {
+  font-size: 12px;
+}
+
+.container .image {
+  width: 180px;
+  height: 180px;
+  box-shadow: 3px 5px 20px #8c9b9a90;
+  margin-bottom: 30px;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container .ditails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ditails .progress {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progress span {
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+.progress span::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #00b9b0;
+}
+
+.progress p {
+  position: absolute;
+  top: 10px;
+  font-size: 12px;
+  color: #7d7d7d;
+  font-weight: bold;
+}
+
+.progress p:nth-child(1) {
+  left: 0;
+}
+
+.progress p:nth-child(3) {
+  right: 0;
+}
+
+.ditails .icons {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons i:nth-child(3) {
+  font-size: 45px;
+  color: #949494;
+}
+
+.icons i:nth-child(3):hover {
+  color: #00b9b090;
+}
+
+.container .list {
+  width: 105%;
+}
+
+.list .music {
+  padding: 14px 8px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #757c7c;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.music h3 {
+  font-size: 16px;
+}
+
+.music p {
+  font-weight: bold;
+}
+
+.music.active {
+  color: #1a1a1a;
+}
+
+.music:hover {
+  background-color: #02c4ba20;
+  transform: scale(1.05);
+}
