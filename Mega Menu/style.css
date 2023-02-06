@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f8fc;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  /* width: 1000px; */
+  column-gap: 80px;
+  row-gap: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px;
+}
+
+.container .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wrapper .icon {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.wrapper:nth-child(1) .icon {
+  background-color: #3dc3ff10;
+}
+
+.wrapper:nth-child(1) .icon:hover {
+  background-color: #3dc3ff30;
+}
+
+.wrapper:nth-child(2) .icon {
+  background-color: #7c62e810;
+}
+
+.wrapper:nth-child(2) .icon:hover {
+  background-color: #7c62e830;
+}
+
+.wrapper:nth-child(3) .icon {
+  background-color: #e4437410;
+}
+
+.wrapper:nth-child(3) .icon:hover {
+  background-color: #e4437430;
+}
+
+.wrapper:nth-child(4) .icon {
+  background-color: #f5a62310;
+}
+
+.wrapper:nth-child(4) .icon:hover {
+  background-color: #f5a62330;
+}
+
+.icon img {
+  width: 23px;
+  transition: transform .3s;
+}
+
+.icon:hover img {
+  transform: translateY(-8px);
+}
+
+.wrapper ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 4px 0;
+}
+
+ul li h2 {
+  font-size: 18px;
+  color: #122f5a;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #3f3f3f;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4ecdff;
+  transition: width .3s;
+}
+
+.wrapper:nth-child(1) li a::after {
+  background-color: #3dc3ff;
+}
+
+.wrapper:nth-child(2) li a::after {
+  background-color: #7c62e8;
+}
+
+.wrapper:nth-child(3) li a::after {
+  background-color: #e44374;
+}
+
+.wrapper:nth-child(4) li a::after {
+  background-color: #f5a623;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+li a.link {
+  color: #4ecdff;
+}
+
+@media (max-width: 800px) {
+  .container {
+    justify-content: flex-start;
+  }
+}
