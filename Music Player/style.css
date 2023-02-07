@@ -68,14 +68,15 @@ i:hover {
 }
 
 .container .image {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 160px;
   box-shadow: 3px 5px 20px #8c9b9a90;
   margin-bottom: 30px;
 }
 
 .image img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -94,36 +95,35 @@ i:hover {
   margin-bottom: 30px;
 }
 
-.progress span {
-  position: relative;
-  display: flex;
-  border-radius: 5px;
-  height: 3px;
+.progress .seek-bar {
+  -webkit-appearance: none;
   width: 100%;
+  height: 3px;
+  border-radius: 5px;
   background-color: #e7e7e7;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.progress span::before {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 3px;
-  background-color: #00b9b0;
+.progress .seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1px;
+  height: 20px;
+  box-shadow: -400px 0 0 400px #00b9b0;
 }
 
 .progress p {
   position: absolute;
-  top: 10px;
   font-size: 12px;
   color: #7d7d7d;
   font-weight: bold;
 }
 
-.progress p:nth-child(1) {
+.progress .current-time {
   left: 0;
 }
 
-.progress p:nth-child(3) {
+.progress .song-duration-time {
   right: 0;
 }
 
@@ -134,13 +134,44 @@ i:hover {
   justify-content: space-between;
 }
 
-.icons i:nth-child(3) {
+.icons .play-btn {
+  border-radius: 50%;
+}
+
+.icons .play-btn i {
   font-size: 45px;
   color: #949494;
 }
 
-.icons i:nth-child(3):hover {
+.icons .play-btn i:hover {
   color: #00b9b090;
+}
+
+.play-btn.pause i:nth-child(1),
+.play-btn i:nth-child(2) {
+  display: none;
+}
+
+.play-btn.pause i:nth-child(2) {
+  display: block;
+}
+
+.play-btn.pause {
+  animation: pulse 1.5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0;
+  }
+
+  50% {
+    box-shadow: 0 0 0 5px #02d4db10;
+  }
+  
+  100% {
+    box-shadow: 0  0 0 5px #02d4db40;
+  }
 }
 
 .container .list {
@@ -148,7 +179,7 @@ i:hover {
 }
 
 .list .music {
-  padding: 14px 8px;
+  padding: 14px 10px;
   margin: 10px 0;
   display: flex;
   align-items: center;
@@ -156,7 +187,7 @@ i:hover {
   color: #757c7c;
   position: relative;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .music h3 {
@@ -171,7 +202,19 @@ i:hover {
   color: #1a1a1a;
 }
 
+.music.active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #00b9b0;
+}
+
 .music:hover {
   background-color: #02c4ba20;
+  box-shadow: 0 4px 20px #004ab920;
   transform: scale(1.05);
 }

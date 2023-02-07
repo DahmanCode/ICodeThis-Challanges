@@ -10,6 +10,8 @@
   <title>Music Player</title>
 </head>
 <body>
+
+  <audio src="" id="audio"></audio>
   
   <div class="container">
 
@@ -17,27 +19,30 @@
       <i class="fa-solid fa-bars-staggered"></i>
       <div class="content">
         <p>PLAYING NOW</p>
-        <h3>Someone Lived This</h3>
-        <small>- Hans Zimmer -</small>
+        <h3 class="music-name">Song name</h3>
+        -<small class="artist-name"> Artist name </small>-
       </div>
       <i class="fa-regular fa-square-plus"></i>
     </div>
 
     <div class="image">
-      <img src="https://imgs.search.brave.com/BbrCmz3SFGAIu_VPxUEqMA9QHL12RlJhH-QYWttr9Cw/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5Z/bll5dE5MX3BpT3Zh/VlhORnFFeGpnSGFI/YSZwaWQ9QXBp" alt="">
+      <img src="https://imgs.search.brave.com/EvHm0LlHmavFx7Qil2KR003FfRQDLIg4LsH0HeqBC_M/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5s/bXRLY3k1TGpGNG1P/N0l6dWFXcHlnSGFI/YSZwaWQ9QXBp" class="cover" alt="">
     </div>
 
     <div class="ditails">
       <div class="progress">
-        <p>3:47</p>
-        <span></span>
-        <p>5:35</p>
+        <input type="range" value="0" class="seek-bar">
+        <p class="current-time">00 : 00</p>
+        <p class="song-duration-time">5:35</p>
       </div>
       <div class="icons">
         <i class="fa-solid fa-arrow-rotate-left"></i>
-        <i class="fa-solid fa-backward-step"></i>
-        <i class="fa-regular fa-circle-play"></i>
-        <i class="fa-solid fa-forward-step"></i>
+        <i class="fa-solid fa-backward-step backward-btn"></i>
+        <div class="play-btn">
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-regular fa-circle-pause"></i>
+        </div>
+        <i class="fa-solid fa-forward-step forward-btn"></i>
         <i class="fa-solid fa-shuffle"></i>
       </div>
     </div>
@@ -48,7 +53,7 @@
         <p class="size">3:37</p>
       </div>
       <div class="music active">
-        <h3>Someone Lived This</h3>
+        <h3>A Magical Journey Through Space</h3>
         <p class="size">5:35</p>
       </div>
       <div class="music">
@@ -63,6 +68,7 @@
 
   </div>
 
+  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
