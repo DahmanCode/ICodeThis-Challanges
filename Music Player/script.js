@@ -11,11 +11,40 @@ const playBtn = document.querySelector('.play-btn')
 const forwardBtn = document.querySelector('.forward-btn')
 const backwardBtn = document.querySelector('.backward-btn')
 
+const musicList = document.querySelectorAll('.music')
+
+musicList.forEach(musicEl => {
+  
+  musicEl.addEventListener('click', () => {
+    for(i of musicList) {
+      i.classList.remove('active')
+    }
+    musicEl.classList.add('active')
+    musicEl.classList.add('stic')
+  })
+  
+});
+
+  for(let j = 0; j < musicList.length; j++) {
+
+    musicList[j].addEventListener('click', () => {
+      setMusic(j)
+      playMusic()
+    })
+  }
+
+
 playBtn.addEventListener('click', () => {
   if(playBtn.className.includes('pause')) {
     music.pause()
+    for(i of musicList) {
+      i.classList.remove('stic')
+    }
   } else {
     music.play()
+    for(i of musicList) {
+      i.classList.add('stic')
+    }
   }
   playBtn.classList.toggle('pause')
 })
@@ -27,7 +56,6 @@ const setMusic = (i) => {
   let song = songs[i]
   currentMusic = i
   music.src = song.path
-  console.log(song)
 
   songName.innerHTML = song.name
   artistName.innerHTML = song.artist
@@ -40,7 +68,7 @@ const setMusic = (i) => {
   }, 300)
 }
 
-setMusic(0)
+setMusic(1)
 
 const formatTime = (time) => {
   let min = Math.floor(time / 60)
@@ -59,6 +87,9 @@ const formatTime = (time) => {
 setInterval(() => {
   seekbar.value = music.currentTime
   currentTime.innerHTML = formatTime(music.currentTime)
+  if(Math.floor(music.currentTime) == Math.floor(seekbar.max)) {
+    forwardBtn.click()
+  }
 }, 500)
 
 seekbar.addEventListener('change', () => {
@@ -67,10 +98,18 @@ seekbar.addEventListener('change', () => {
 
 const playMusic = () => {
   music.play()
-  playBtn.classList.remove('pause')
+  playBtn.classList.add('pause')
 }
 
 // forward and backward button
+
+moveToMusic = (i) => {
+  for(j of musicList) {
+    j.classList.remove('active')
+  }
+  musicList[i].classList.add('active')
+  musicList[i].classList.add('stic')
+}
 
 forwardBtn.addEventListener('click', () => {
 
@@ -79,9 +118,9 @@ forwardBtn.addEventListener('click', () => {
   } else {
     currentMusic++
   }
-
+  moveToMusic(currentMusic)
   setMusic(currentMusic)
-  playBtn.click()
+  playMusic()
   
 })
 
@@ -93,7 +132,10 @@ backwardBtn.addEventListener('click', () => {
     currentMusic--
   }
 
+  moveToMusic(currentMusic)
   setMusic(currentMusic)
-  playBtn.click()
+  playMusic()
 
 })
+
+
