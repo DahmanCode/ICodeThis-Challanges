@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #00c3ff, #af41fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Raleway', serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.search {
+  position: relative;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search h4 {
+  color: #0c598d;
+  position: absolute;
+  bottom: -20px;
+  left: 28px;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.search h4::after {
+  content: '';
+  position: absolute;
+  left: 48px;
+  top: 6px;
+  border-top: 5px solid #0c598d;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.search h4:hover::after{
+  border-top: 5px solid #af41fa;
+}
+
+.search .input {
+  background-color: #c9f3ff;
+  font-size: 18px;
+  padding: 28px;
+  height: 50px;
+  width: 50px;
+  border: 0;
+  transition: width .3s ease;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.btn {
+  background-color: #0c598d;
+  color: #e418ff;
+  border: 5px solid #c9f3ff;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  height: 90px;
+  width: 90px;
+  transition: transform .3s ease;
+  border-radius: 50%;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: c9f3ff;
+  border: 4px solid #e418ff;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  border: 4px solid #0c598d;
+}
+
+.btn:hover {
+  background-color: #e418ff;
+  color: #0c598d;
+  /* border: 5px solid #003d66; */
+}
+
+.btn:focus,
+.input:focus { 
+  outline: none;
+}
+
+.search.active .input {
+  width: 500px;
+  border-radius: 6px 0 0 6px;
+}
+
+.search.active h4 {
+  visibility: visible;
+  transition: all .3s;
+  transition-delay: .4s;
+  bottom: -45px;
+}
+
+.search.active .btn {
+  transform: translateX(495px);
+}
