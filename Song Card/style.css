@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+body {
+  background-color: #f7f8fc;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 800px;
+  max-width: 750px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px #0077a720;
+}
+
+.card .image {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px #d3430050;
+
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .info {
+  margin-left: 180px;
+}
+
+.card .info h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.card .info p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.play-btn {
+  background-color: #f3fcff;
+  border: 16px solid #f3fcff;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+
+.play-btn:focus {
+  outline: none;
+}
+
+.play-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 12px #cfcfcf;
+}
+
+
+.play-btn.pause img:nth-child(1),
+.play-btn img:nth-child(2) {
+  display: none;
+}
+
+.play-btn.pause img:nth-child(2) {
+  display: block;
+}
+
+.play-btn.pause {
+  animation: pulse 1.5s linear infinite;
+  /* transform-origin: ; */
+}
+
+@keyframes pulse {
+  0% {
+    border: 10px solid #f3fcff;
+  }
+
+  50% {
+    border: 5px solid #c9f1ff;
+  }
+  
+  100% {
+    border: 16px solid #f3fcff;
+  }
+}
+
+.play-btn img {
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.play-btn img:nth-child(2) {
+  left: 50%;
+}
+
+@media (max-width:700px) {
+  .card {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 300px;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  .card .image {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card .info {
+    margin-left: 0;
+    margin-top: 150px;
+  }
+
+  .play-btn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
