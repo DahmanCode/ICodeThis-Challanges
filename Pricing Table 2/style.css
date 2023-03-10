@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:500,700,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+body {
+  position: relative;
+  background-color: #ebeef2;
+  color: #002442;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 680px;
+  max-width: 680px;
+  margin: 30px;
+}
+
+.container .header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .header {
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.header .btns {
+  padding: 4px;
+  background-color: #d4d9e0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btns button {
+  position: relative;
+  background-color: transparent;
+  color: #82878b;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.btns button.active {
+  color: #002442;
+  z-index: 999;
+}
+
+.btns button.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px #004a8660;
+  border-radius: 18px;
+  z-index: -1;
+}
+
+.container .cards {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards .card {
+  position: relative;
+  height: 330px;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px #00020320;
+}
+
+.card:nth-child(2)::after {
+  content: 'RECOMMEND';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6fb0e2;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  top: 3rem;
+  right: -5.5rem;
+  width: 300px;
+  height: 30px;
+  background-color: #d2f8ff;
+  transform: rotate(45deg);
+}
+
+.card .month {
+  display: none;
+}
+
+.card h3 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  padding-bottom: 6px;
+}
+
+.card span {
+  font-size: 15px;
+  color: #00020390;
+  font-weight: 600;
+}
+
+.card div {
+  padding-bottom: 20px;
+}
+
+.card p  {
+  font-size: 13px;
+  padding-bottom: 10px;
+  color: #002538dd;
+}
+
+.card .btn {
+  width: 260px;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  background-color: transparent;
+  color: #001b29;
+  border: 2px solid #00020360;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #001b29;
+  color: #fff;
+}
+
+@media (max-width:700px) {
+  body {
+    height: auto;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+  
+  .header .btns {
+    padding: 4px;
+  }
+
+  .btns button {
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+
+  .container .cards {
+    /* width: 100%; */
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .cards .card {
+    width: 320px;
+  }
+}
+
+@media (max-width:430px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
