@@ -166,7 +166,7 @@ p:hover img {
 }
 
 .btn:active {
-  transform: scale(.98);
+  transform: scale(.97);
 }
 
 @media (max-width:700px) {
